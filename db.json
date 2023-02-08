@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "id": 3,
+      "text": "Task 3",
+      "day": "03.03.2033",
+      "reminder": false
+    },
+    {
+      "id": 4,
+      "text": "Task XY",
+      "day": "04.04.2044",
+      "reminder": true
+    },
+    {
+      "id": 5,
+      "text": "Task z",
+      "day": "03.03.2033",
+      "reminder": false
+    },
+    {
+      "id": 6,
+      "text": "Task XY",
+      "day": "04.04.2044",
+      "reminder": true
+    },
+    {
+      "text": "asdf",
+      "reminder": false,
+      "day": "sadg",
+      "id": 7
+    },
+    {
+      "text": "Test TAsk",
+      "reminder": true,
+      "day": "2023-02-08",
+      "id": 8
+    }
+  ]
+}

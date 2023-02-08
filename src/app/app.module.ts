@@ -1,12 +1,31 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
+import { AboutComponent } from './components/about/about.component';
+import { AddTaskComponent } from './components/add-task/add-task.component';
 import { ButtonComponent } from './components/button/button.component';
-import { TasksComponent } from './components/tasks/tasks.component';
+import { HeaderComponent } from './components/header/header.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TasksComponent } from './components/tasks/tasks.component';
+import { FooterComponent } from './components/footer/footer.component';
+
+/* defines the Routes. Here they are used in app.component.html to decide, what components are supposed to be shown when a certain path is called */
+const appRoutes: Routes = [
+  {
+    path: '',
+    component: TasksComponent,
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
+  },
+];
+
 
 @NgModule({
   declarations: [
@@ -14,13 +33,20 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeaderComponent,
     ButtonComponent,
     TasksComponent,
-    TaskItemComponent
+    TaskItemComponent,
+    AddTaskComponent,
+    AboutComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes, { enableTracing: true }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+}
